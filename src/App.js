@@ -4,15 +4,21 @@ import { useState } from "react";
 const foodDB = {
   chineaseFood: [
     { name: "Momos", rating: "4.5/5" },
-    { name: "Chowmein", rating: "4.6/5" }
+    { name: "Chowmein", rating: "4.6/5" },
+    { name: "Fried Rice", rating: "5/5" },
+    { name: "Manchurian", rating: "4.7/5" },
+    { name: "Spring Rolls", rating: "4.7/5" }
   ],
   northIndian: [
     { name: "Chhole bhature", rating: "5/5" },
-    { name: "Samosa", rating: "4.8/5" }
+    { name: "Samosa", rating: "4.8/5" },
+    { name: "Dahi Bhalla", rating: "4.7/5" }
   ],
   southIndian: [
     { name: "Uttapam", rating: "4.5/5" },
-    { name: "Puttu", rating: "4.7/5" }
+    { name: "Puttu", rating: "4.7/5" },
+    { name: "Sambar", rating: "4.8/5" },
+    { name: "Masala Dosa", rating: "4.7/5" }
   ]
 };
 
@@ -41,18 +47,7 @@ export default function App() {
       <div style={{ textAlign: "left" }}>
         <ul style={{ paddingInlineStart: "0" }}>
           {foodDB[selectedFood].map((item) => (
-            <li
-              key={item.name}
-              style={{
-                listStyle: "none",
-                padding: "1rem",
-                border: "1px solid #D1D5DB",
-                width: "70%",
-                margin: "1rem 0rem",
-                borderRadius: "0.5rem"
-              }}
-            >
-              {" "}
+            <li key={item.name} className="food-items">
               <div style={{ fontSize: "larger" }}> {item.name} </div>
               <div style={{ fontSize: "smaller" }}> {item.rating} </div>
             </li>
