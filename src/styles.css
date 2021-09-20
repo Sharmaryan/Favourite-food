@@ -3,23 +3,31 @@
   max-width: 600px;
   margin: auto;
   padding: 2rem;
+  color: white;
+}
+h1 {
+  color: black;
 }
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .food-items {
-  border: 1px solid black;
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   list-style: none;
-  background-color: rgb(211, 236, 211);
+  background-color: rgb(47, 58, 54);
+}
+.item-description {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
 }
 button {
-  border: 1px solid black;
+  border: none;
   margin: 1rem 0.5rem;
   border-radius: 10px;
   font-size: 1rem;
-  padding: 7px 15px;
+  padding: 0.5rem 0.3rem;
+  width: 200px;
   cursor: pointer;
-  background-color: rgb(211, 236, 211);
+  background-color: rgb(167, 189, 181);
 }
