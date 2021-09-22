@@ -6,7 +6,7 @@
   color: white;
 }
 h1 {
-  color: black;
+  color: white;
 }
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -15,7 +15,15 @@ body {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   list-style: none;
-  background-color: rgb(47, 58, 54);
+  background-color: rgb(61, 235, 171);
+}
+header {
+  background-color: rgb(61, 235, 171);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.food-type {
+  background-color: rgba(15, 11, 245, 0.671);
 }
 .item-description {
   font-family: "Courier New", Courier, monospace;
@@ -29,5 +37,5 @@ button {
   padding: 0.5rem 0.3rem;
   width: 200px;
   cursor: pointer;
-  background-color: rgb(167, 189, 181);
+  background-color: rgb(48, 214, 153);
 }

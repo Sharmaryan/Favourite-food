@@ -100,12 +100,13 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>🍕goodFood</h1>
-      <p style={{ fontSize: "smaller", color: "black" }}>
-        Checkout my favorite food. Select a type of food to get started
-      </p>
-
-      <div>
+      <header className="head">
+        <h1>🍕goodFood</h1>
+        <p style={{ fontSize: "smaller", color: "black" }}>
+          Checkout my favorite food. Select a type of food to get started
+        </p>
+      </header>
+      <div className="food-type">
         {Object.keys(foodDB).map((foodname) => (
           <button key={foodname} onClick={() => foodClickHandler(foodname)}>
             {foodname}
