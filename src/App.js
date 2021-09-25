@@ -2,7 +2,7 @@ import "./styles.css";
 import { useState } from "react";
 
 const foodDB = {
-  chineaseFood: [
+  chineseFood: [
     {
       name: "Momos",
       rating: "4.5/5",
