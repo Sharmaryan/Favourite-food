@@ -1,7 +1,7 @@
 import "./styles.css";
 import { useState } from "react";
 
-const foodDB = {
+const foodCategories = {
   chineseFood: [
     {
       name: "Momos",
@@ -91,53 +91,44 @@ const foodDB = {
   ]
 };
 
+const foodCategory = Object.keys(foodCategories);
+
 export default function App() {
-  const [selectedFood, setFood] = useState("southIndian");
-
-  function foodClickHandler(foodname) {
-    setFood(foodname);
+  const [currentFood, setCurrentFood] = useState("chineseFood");
+  function clickHandler(food) {
+    setCurrentFood(food);
   }
-
   return (
     <div className="App">
-      <header className="head">
-        <h1>🍕goodFood</h1>
-        <p style={{ fontSize: "smaller", color: "black" }}>
+      <div className="nav">
+        <h1 className="heading">Food Recommendation</h1>
+        <p className="nav-text">
           Checkout my favorite food. Select a type of food to get started
         </p>
-      </header>
-      <div className="food-type">
-        {Object.keys(foodDB).map((foodname) => (
-          <button key={foodname} onClick={() => foodClickHandler(foodname)}>
-            {foodname}
-          </button>
-        ))}
       </div>
-
-      <hr />
-
-      <div style={{ textAlign: "left" }}>
-        <ul style={{ paddingInlineStart: "0" }}>
-          {foodDB[selectedFood].map((item) => (
-            <li key={item.name} className="food-items">
-              <div style={{ fontSize: "larger", textAlign: "center" }}>
-                {" "}
-                {item.name}{" "}
-              </div>
-              <div
-                style={{
-                  fontSize: "smaller",
-                  textAlign: "center",
-                  paddingTop: ".5rem"
-                }}
-              >
-                {" "}
-                {item.rating}{" "}
-              </div>
-              <p className="item-description">{item.desc}</p>
-            </li>
+      <div className="main-section">
+        <div className="btn-section">
+          {foodCategory.map((food) => (
+            <button
+              key={food}
+              className="btn"
+              onClick={() => clickHandler(food)}
+            >
+              {food}
+            </button>
           ))}
-        </ul>
+        </div>
+        <div>
+          <ul>
+            {foodCategories[currentFood].map((item) => (
+              <li className="food-section" key={item.name}>
+                <div className="food-name">{item.name}</div>
+                <div className="food-rating"> {item.rating}</div>
+                <div className="food-desc"> {item.desc}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -1,40 +1,53 @@
 .App {
   text-align: center;
-  max-width: 600px;
+  font-family: sans-serif;
+}
+.main-section {
+  max-width: 500px;
   margin: auto;
-  padding: 2rem;
 }
-h1 {
-  color: white;
+:root {
+  --primary-color: rgb(34, 243, 227);
 }
-body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
 }
-.food-items {
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  list-style: none;
-  background-color: rgb(61, 235, 171);
+.nav {
+  background-color: black;
+  height: 30vh;
 }
-header {
-  background-color: rgb(61, 235, 171);
-  padding: 1rem;
-  margin: 1rem 0;
+.nav-text {
+  color: var(--primary-color);
 }
-.food-type {
-  background-color: rgba(15, 11, 245, 0.671);
+.heading {
+  padding: 1rem 0;
+  color: var(--primary-color);
 }
-.item-description {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
+.btn-section {
+  padding: 2rem 0;
 }
-button {
-  border: none;
-  margin: 1rem 0.5rem;
-  border-radius: 10px;
-  font-size: 1rem;
+.btn {
   padding: 0.5rem 0.3rem;
-  width: 200px;
+  margin: 0.2rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
   cursor: pointer;
-  background-color: rgb(48, 214, 153);
+}
+.food-section {
+  border: 1px solid black;
+  margin: 1rem 0;
+  list-style: none;
+  padding: 1rem 0;
+  border-radius: 10px;
+  color: var(--primary-color);
+  background-color: black;
+}
+.food-name,
+.food-rating {
+  padding: 0.5rem 0;
+}
+.food-desc {
+  text-align: left;
+  padding: 0.5rem 1rem;
 }
